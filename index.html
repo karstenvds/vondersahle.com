@@ -61,7 +61,14 @@
           </div>
 
           <div class="hero-cta">
-            <a href="#" class="btn btn-primary">View Resume</a>
+            <a
+              href=""
+              id="cv-button"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              >View Resume</a
+            >
             <a href="#contact" class="btn">Let's Connect</a>
           </div>
         </div>
@@ -192,9 +199,15 @@
             <a
               href="https://www.linkedin.com/in/karstenvondersahle/"
               class="social-link"
+              target="_blank"
+              rel="noopener"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-            <a href="https://www.behance.net/karsten_vds" class="social-link"
+            <a
+              href="https://www.behance.net/karsten_vds"
+              class="social-link"
+              target="_blank"
+              rel="noopener"
               ><i class="fab fa-behance"></i
             ></a>
           </div>
@@ -206,6 +219,7 @@
     <footer>
       <div class="container">
         <p>&copy; 2025 Karsten von der Sahle</p>
+        <a href="impressum.html">Impressum</a>
       </div>
     </footer>
 
@@ -227,6 +241,12 @@
       var encEmail = "aGlAdm9uZGVyc2FobGUuY29t";
       const form = document.getElementById("contact-me");
       form.setAttribute("href", "mailto:".concat(atob(encEmail)));
+
+      // Obfuscate CV link
+      var encCVLink =
+        "aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZvLzduNmdxdGs1ZnA5cm95dWViZnRncy9BRFRVWFYwT2RRV3hobUFPbTNaWEtqMD9ybGtleT1tZXNnYzE3azR5M2VibXlkMWMxYTg1dnpjJmRsPTA=";
+      const cvButton = document.getElementById("cv-button");
+      cvButton.setAttribute("href", atob(encCVLink));
     </script>
   </body>
 </html>
